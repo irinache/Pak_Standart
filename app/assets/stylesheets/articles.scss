@@ -1,0 +1,70 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.articles{
+  position: absolute;
+  top:16%;
+  width:100%;
+  z-index: 10;
+}
+.article{
+  position: relative;
+  top:0;
+  background-color: #b1bfc0;
+  width:80%;
+  height: 280px;
+  left:50%;
+  margin-bottom: 20px;
+  transform: translate(-50%);
+
+}
+
+.picture{
+  position: absolute;
+  left: 25px;
+  width: 232px;
+  height: 232px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+.news_header{
+  position: absolute;
+  left: 300px;
+  top: 5%;
+}
+.date{
+  position: absolute;
+  right: 30px;
+  top: 5%;
+}
+
+#text {
+  text-indent: 1.3em;
+  font-family: 'droid_sansregular';
+  text-align: justify;
+  color: #493b30;
+  @media all{
+    font-size: 1.5vw;
+  }
+  @media (max-width: 700px){
+    font-size: 8pt;
+  }
+}
+.article_text{
+  position: absolute;
+  top: 30%;
+  left: 300px;
+  width: 650px;
+  height: 70%;
+}
+
+.flexible_block {
+  position: relative;
+  top:0;
+  width: 100%;
+  min-height: 1100px;
+  height: auto;
+  overflow: hidden;
+}

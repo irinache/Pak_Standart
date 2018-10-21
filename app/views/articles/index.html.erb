@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Новости</title>
+</head>
+
+<body>
+
+<div class="content">
+  <div class="flexible_block">
+    <%= image_tag 'backgr_short.png', width: '100%', class: 'block_background' %>
+    <div class="header">
+      <%= render partial: "/header_unauthorized_user" %>
+      <div class="articles">
+        <% @article.each do |article| %>
+        <div class="article">
+          <div class="picture">
+            <%= image_tag 'news_picture.png'%>
+          </div>
+          <div id="heading" class="news_header"><%= article.title %>
+           </div> <%= image_tag 'line.png', style: 'top:23%; left: 370px;',class: 'line' %>
+
+          <div id="text" class="date"><%= article.date %></div>
+          <div id = "text" class="article_text"><%= article.text %></div>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="block">
+    <%= render partial:'/footer'%>
+  </div>
+
+
+</div>
+</body>
