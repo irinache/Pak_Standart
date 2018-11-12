@@ -2,13 +2,13 @@
 <%= image_tag 'Лого.png', class: 'logo' %>
 
 <ul id="menu">
-  <li><a href="#">Главная</a></li>
+  <li><%= link_to "Главная", root_path %></li>
   <li><%= image_tag 'point.png' %></li>
-  <li><%= link_to 'Новости', controller: 'articles' %></li>
+  <li><%= link_to "Новости",   news_path %></li>
   <li><%= image_tag 'point.png' %></li>
-  <li><a href="#">Прайс</a></li>
+  <li><%= link_to "Прайс",   "#" %></li>
   <li><%= image_tag 'point.png' %></li>
-  <li><a href="#">Контакты</a></li>
+  <li><%= link_to "Контакты", contact_path %></li>
 </ul>
 <div id="buttons">
   <a href="#" id="button_type1">Вход</a>

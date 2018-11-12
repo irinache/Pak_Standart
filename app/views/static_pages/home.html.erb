@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ПакСтандарт</title>
-</head>
-
-<body>
+<% provide(:title, "Главная") %>
 
 <div class="content">
   <div id="call_back">
@@ -78,7 +72,7 @@
         <p><%= image_tag 'galochka.png'%>Lorem ipsum dolor sit amet</p>
         <p>  <%= image_tag 'galochka.png'%>Ut enim ad minim veniam</p>
         <p><%= image_tag 'galochka.png'%>Quis nostrud exercitation ullamco</p>
-       <p><%= image_tag 'galochka.png'%>Duis aute irure dolor in reprehenderit in voluptate </p>
+        <p><%= image_tag 'galochka.png'%>Duis aute irure dolor in reprehenderit in voluptate </p>
         <p><%= image_tag 'galochka.png'%>Lorem ipsum dolor sit amet</p>
       </div>
     </div>
@@ -89,10 +83,10 @@
     <p id="heading" class="heading-center">К тому же мы сотрудничаем с:</p>
     <%= image_tag 'line.png', style: 'top:22%', class: 'line' %>
     <div class="logo_list">
-    <%= image_tag 'logo_of_company.png'%>
-    <%= image_tag 'logo_of_company.png'%>
-    <%= image_tag 'logo_of_company.png'%>
-    <%= image_tag 'logo_of_company.png'%>
+      <%= image_tag 'logo_of_company.png'%>
+      <%= image_tag 'logo_of_company.png'%>
+      <%= image_tag 'logo_of_company.png'%>
+      <%= image_tag 'logo_of_company.png'%>
     </div>
   </div>
 
@@ -127,5 +121,3 @@
     <%= render partial:'/footer'%>
   </div>
 </div>
-</body>
-</html>

@@ -1,1 +1,0 @@
-alert("main_page");
