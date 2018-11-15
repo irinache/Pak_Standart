@@ -1,6 +1,6 @@
 //--------------------the whole page
 .content{
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -15,8 +15,10 @@
 }
 //------------------bg of blocks
 .block_background {
-
   z-index: 0;
+  img {
+    width: 100%;
+  }
 }
 //------------------header
 .header_bg {
@@ -26,7 +28,7 @@
 }
 
 
-.logo {
+#logo {
   position: absolute;
   max-width: 15%;
   top: 1%;
@@ -78,7 +80,7 @@ ul#menu {
 
 //--------------------------backgrounds for text blocks
 
-#text_block_left {
+.text_block_left {
   position: absolute;
   width: 45%;
   height: 75%;
@@ -89,7 +91,7 @@ ul#menu {
 
 }
 
-#text_block_right {
+.text_block_right {
   position: absolute;
   width: 45%;
   height: 75%;
@@ -98,6 +100,18 @@ ul#menu {
   margin: auto;
   right:50px;
 
+}
+
+.center_block{
+  position: absolute;
+  width: 40%;
+  height: 500px;
+  top: 10%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 //-----------------bg image of text block
@@ -110,7 +124,7 @@ ul#menu {
   z-index: 4;
 }
 //------------------------headings
-#heading {
+.heading {
   font-family: 'droid_sansbold';
   color: #493b30;
   font-weight: bold;
@@ -161,7 +175,7 @@ ul#menu {
   z-index: 6;
 }
 //----------------------------text types
-#text_in_block {
+.text_in_block {
   position: absolute;
   top: 19%;
   left:50%;
@@ -170,7 +184,7 @@ ul#menu {
   width: 90%;
   z-index: 5;
 }
-#text_in_block p{
+.text_in_block p{
   text-indent: 1.5em;
   font-family: 'droid_sansregular';
   text-align: justify;
@@ -183,7 +197,7 @@ ul#menu {
   }
 }
 
-#wide_text_block {
+.wide_text_block {
   position: absolute;
   left:50%;
   margin-right: -50%;
@@ -192,7 +206,7 @@ ul#menu {
   top: 70%;
   width: 80%;
 }
-#wide_text_block p{
+.wide_text_block p{
   text-indent: 1.5em;
   font-family: 'droid_sansregular';
   text-align: justify;
@@ -443,4 +457,15 @@ ul#menu {
   font-weight: bold;
   font-style: normal;
 
+}
+
+footer {
+  position: relative;
+}
+
+.form{
+  width: 80%;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
