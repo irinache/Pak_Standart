@@ -13,10 +13,6 @@ $gray-medium-light: #eaeaea;
 
 
 
-section {
-  overflow: auto;
-}
-
 textarea {
   resize: vertical;
 }
@@ -54,26 +50,6 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-
 /* miscellaneous */
 
 .debug_dump {
@@ -241,7 +217,7 @@ input {
 
 .login_block{
   position: absolute;
-  width: 40%;
+  width: 500px;
   top:200px;
   right: 0;
   left: 0;

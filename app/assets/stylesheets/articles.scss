@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .articles{
-  position: absolute;
-  top:16%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 50px;
   width:100%;
-  z-index: 10;
+  z-index: 2;
 }
 .article{
   position: relative;
@@ -67,4 +68,5 @@
   min-height: 1100px;
   height: auto;
   overflow: hidden;
+  background: url('backgr_short.png') no-repeat;
 }

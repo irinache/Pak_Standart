@@ -404,7 +404,7 @@ ul#menu {
 //--------------------------columns in footer
 #columns{
   position: absolute;
-  top: 2%;
+  top: 10%;
   width:100%;
 }
 #column{
@@ -460,6 +460,8 @@ ul#menu {
 
 footer {
   position: relative;
+  background: url("bg7.png");
+  height: 131px;
 }
 
 .form{
@@ -517,3 +519,63 @@ input[type=checkbox]{
 .login_err{
   margin-bottom: 20px;
 }
+.contact_block{
+  background-color: #f6f1ee;
+  border: 20px solid #c0986c;
+  width: 400px;
+  height: 400px;
+}
+.f_block {
+  position: absolute;
+  top:200px;
+  left: 100px;
+}
+.s_block {
+  position: absolute;
+  top:200px;
+  right: 100px;
+}
+.t_block {
+  position: absolute;
+  top:300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.center_text{
+
+  padding-top: 120px;
+  p{
+    font-size: 18px;
+    color: #493b30;
+    font-family: 'droid_sansregular';
+    text-align: center;
+  }
+
+}
+.call_back_block{
+  padding: 20px;
+  height: 300px;
+  background-color: #779453;
+  text-align: center;
+
+}
+.reg_white_text{
+    font-family: 'droid_sansregular';
+    color: white;
+    font-size: 14pt;
+    z-index: 5;
+}
+.white_header{
+  font-family: 'droid_sansbold';
+  color: white;
+  font-weight: bold;
+  @media all{
+    font-size: 2.2vw;
+  }
+  @media (max-width: 700px){
+    font-size: 12pt;
+  }
+  z-index: 5;
+}
+

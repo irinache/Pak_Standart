@@ -39,7 +39,7 @@ carousel.querySelector('.next').onclick = function () {
         position = position - width * count;
         list.style.marginLeft = position + 'px';
     }
-}
+};
     window.onresize = function () {
         position = 0;
         list.style.marginLeft = position + 'px';
