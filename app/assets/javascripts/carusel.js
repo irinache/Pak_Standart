@@ -29,7 +29,7 @@ carousel.querySelector('.prev').onclick = function () {
     position = Math.min(position + width * count, 0);
     list.style.marginLeft = position + 'px';
 
-}
+};
 carousel.querySelector('.next').onclick = function () {
     // сдвиг вправо
     width = document.getElementById("it").clientWidth;

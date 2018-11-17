@@ -227,3 +227,51 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.registration_block{
+  position: absolute;
+  width: 500px;
+  top:200px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 45px;
+}
+
+.login_block{
+  position: absolute;
+  width: 40%;
+  top:200px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 65px;
+}
+.heading-center:after {
+   content: '';
+   width: 147px;
+   height: 7px;
+   background: #779453;
+   position: absolute;
+   top:55px;
+   bottom: 10px;
+   left: 50%;
+   border-radius: 25px;
+   -webkit-transform: translate(-50%);
+   -ms-transform: translate(-50%);
+   transform: translate(-50%);
+ }
+.news_header:after {
+  content: '';
+  width: 147px;
+  height: 7px;
+  background: #779453;
+  position: absolute;
+  top:55px;
+  bottom: 10px;
+  left: 0;
+  border-radius: 25px;
+
+}

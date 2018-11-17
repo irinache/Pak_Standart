@@ -456,7 +456,6 @@ ul#menu {
   url('droid_sans_bold-webfont.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-
 }
 
 footer {
@@ -468,4 +467,53 @@ footer {
   right: 0;
   left: 0;
   margin: auto;
+}
+
+.btn_green {
+  background-color: #779453;
+  //color: wphite;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  font-family: 'droid_sansbold';
+  outline: none;
+  margin-top: 40px;
+}
+
+input{
+  padding: 10px 20px;
+  border: 0;
+
+}
+input[type=checkbox]{
+  font-size: 16px;
+  background: white;
+  font-weight: bold;
+}
+.text_link{
+  position: absolute;
+  color: #493b30;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: 'droid_sansbold';
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+}
+.text_link:hover{
+  color: #779453;
+}
+
+.btn_green:hover{
+  background-color: #92af6f;
+}
+.article_text{
+  padding-top: 20px;
+}
+.login_err{
+  margin-bottom: 20px;
 }

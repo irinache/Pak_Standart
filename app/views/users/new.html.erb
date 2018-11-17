@@ -1,29 +1,23 @@
 <% provide(:title, 'Sign up') %>
 <div>
   <%= image_tag 'entry_bg.png', class: 'block_background'  %>
-  <div class = "center_block">
-    <h1 class="heading">Регистрация</h1>
+  <div class = "registration_block">
 
-    <div class="row">
       <div class="form">
+        <h1 class="heading">Регистрация</h1>
+        <%= render 'shared/error_messages' %>
         <%= form_for(@user) do |f| %>
-          <%= render 'shared/error_messages' %>
 
-          <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control' %>
+          <%= f.text_field :name, placeholder: 'ФИО'%>
 
-          <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.email_field :email, placeholder: 'e-mail' %>
 
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.password_field :password, placeholder: 'Пароль'  %>
 
-          <%= f.label :password_confirmation, "Confirmation" %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <%= f.password_field :password_confirmation, placeholder: 'Повторите пароль'  %>
 
-          <%= f.submit "Create my account", class: "btn btn-primary" %>
+          <%= f.submit "Зарегистрироваться", class: "btn_green" %>
         <% end %>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
