@@ -4,18 +4,13 @@
 
     <ul id="menu">
       <li><%= link_to "Главная", root_path %></li>
-      <li><%= image_tag 'point.png' %></li>
       <li><%= link_to "Новости",   news_path %></li>
-      <li><%= image_tag 'point.png' %></li>
       <li><%= link_to "Прайс",  prices_path%></li>
-      <li><%= image_tag 'point.png' %></li>
       <li><%= link_to "Контакты", contact_path %></li>
 
   <% if logged_in? %>
-        <li><%= image_tag 'point.png' %></li>
         <li><%= link_to "Личный кабинет", current_user %></li>
         <% if current_user.is_admin?%>
-        <li><%= image_tag 'point.png' %></li>
         <li><%= link_to "Клиенты", users_path %></li>
         <% end %>
         </ul>

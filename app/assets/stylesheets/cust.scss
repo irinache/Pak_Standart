@@ -225,6 +225,18 @@ input {
   background-color: rgba(255, 255, 255, 0.5);
   padding-bottom: 65px;
 }
+
+
+.edit_block{
+  position: absolute;
+  width: 500px;
+  top:200px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(230, 230, 230, 0.7);
+  padding-bottom: 45px;
+}
 .heading-center:after {
    content: '';
    width: 147px;

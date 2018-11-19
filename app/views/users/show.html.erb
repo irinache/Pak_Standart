@@ -1,12 +1,22 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-        <%= link_to "Settings", edit_user_path(current_user) %>
-      </h1>
-    </section>
-  </aside>
+
+<div class="content">
+  <div class="order_block">
+    <div class="order_window">
+      Для того, чтобы сделать<br>
+      заказ нажмите на кнопку
+      <a href="#" class="button_center" id="button_type2">ЗАКАЗАТЬ</a>
+    </div>
+  </div>
+  <div class="order_list">
+    <p class="heading heading-center">
+      Мои заказы
+    </p>
+  </div>
+  <div class="edit_profile_block">
+    <div class="position_center">
+      <%= link_to "Редактировать профиль",  edit_user_path, class: "white_button"%>
+    </div>
+
+  </div>
 </div>

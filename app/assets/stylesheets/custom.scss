@@ -40,6 +40,7 @@
   position: absolute;
   top:80px;
  //float: left;
+  width: 70%;
   right:0;
   left: 30%;
   z-index: 3;
@@ -47,7 +48,7 @@
 ul#menu {
  // padding-left: 0;
   //height: 5%;
-  width: 100%;
+  //width: 100%;
  // overflow: hidden;
  // display: list-item;
 
@@ -56,6 +57,14 @@ ul#menu {
   display: inline;
   //list-style-type: circle;
 
+}
+#menu li:after {
+  content: '●';
+  padding: 10px;
+  color:  #493b30;
+}
+#menu li:last-child:after {
+  content: none;
 }
 #menu a {
   color: #493b30;
@@ -270,6 +279,7 @@ ul#menu {
   text-decoration: none;
   user-select: none;
   background-color: #779453;
+  padding: 20px 35px;
   @media all{
     font-size: 2.1vw;
   }
@@ -287,9 +297,9 @@ ul#menu {
   background-color: #92af6f;
 }
 .button_center{
-  padding: 4% 7%;
+
   position: absolute;
-  bottom: 8%;
+  bottom: 40px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%);
@@ -472,6 +482,7 @@ footer {
   height: 131px;
 }
 
+
 .form{
   width: 80%;
   right: 0;
@@ -636,4 +647,77 @@ input[type=checkbox]{
     top: 400px;
     right:0;
   }
+}
+
+/*user personal cabinet*/
+.order_block{
+  position: relative;
+  background: image_url("order_block_bg.png") no-repeat;
+  height: 656px;
+}
+.order_window{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 330px;
+  height: 230px;
+  top:280px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 14pt;
+  font-family: 'droid_sansregular';
+}
+.order_list{
+  position: relative;
+  min-height: 300px;
+}
+
+.edit_profile_block{
+  position: relative;
+  height: 200px;
+  background-color: #779453;
+}
+.white_button{
+  color: #54483e;
+  text-decoration: none;
+  user-select: none;
+  background-color: white;
+  padding: 20px 35px;
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: 'droid_sansbold';
+  text-align: center;
+  outline: none;
+}
+.white_button:hover{
+  text-decoration: none;
+  background-color: #e0f1ca;
+  color: #54483e;
+}
+.position_center{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: fit-content;
+  width: fit-content;
+}
+
+.index_block{
+  position: relative;
+  background: image_url("backgr_short.png") no-repeat;
+  //padding-top: 150px;
+  padding: 150px 20px 20px 20px;
+}
+.personal_cabinet{
+  position: relative;
+  background: image_url("pers_cab_short_bg.png") no-repeat;
+  min-height: 900px;
+  height: auto;
 }
