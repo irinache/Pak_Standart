@@ -1,0 +1,23 @@
+<% provide(:title, "Прайс") %>
+<div class="content price_content">
+  <div class="flexible_block">
+    <%=image_tag "boxes_bg_price1.png", class: "left_img"%>
+    <%=image_tag "boxes_bg_price2.png", class: "right_img" %>
+    <div  class ="price_table">
+      <table>
+        <tr>
+          <th>Марка гофрокартона</th>
+          <th>Гофролист стоимость <br>в грн с НДС за 1м2 </th>
+          <th>Изделия из гофрокартона <br>стоимость в грн с НДС за 1м2</th>
+        </tr>
+        <% @price.each do |p| %>
+          <tr>
+            <td class="left_align"><%= p.mark_of_cardboard %></td>
+            <td><%= p.gofrolist_price %></td>
+            <td><%= p.product_price %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+   </div>
+</div>

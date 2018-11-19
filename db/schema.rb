@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181118215621) do
+ActiveRecord::Schema.define(version: 20181119132418) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "date"
     t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.string "mark_of_cardboard"
+    t.string "gofrolist_price"
+    t.string "product_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +36,8 @@ ActiveRecord::Schema.define(version: 20181118215621) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
+    t.string "phone_num"
+    t.string "company_name"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

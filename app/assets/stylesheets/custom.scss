@@ -38,29 +38,37 @@
 //--------------------menu
 #menu {
   position: absolute;
-  top:75px;
-  float: left;
-  right:10%;
+  top:80px;
+ //float: left;
+  right:0;
+  left: 30%;
   z-index: 3;
 }
 ul#menu {
-  padding-left: 0;
-  height: 5%;
-  width: 58%;
-  overflow: hidden;
+ // padding-left: 0;
+  //height: 5%;
+  width: 100%;
+ // overflow: hidden;
+ // display: list-item;
+
 }
-#menu li { display: inline;}
+#menu li {
+  display: inline;
+  //list-style-type: circle;
+
+}
 #menu a {
   color: #493b30;
-  padding: 1% 2%;
+  padding: 0% 0.5%;
   text-decoration: none;
   font-family: 'droid_sansbold';
-  @media all{
-    font-size: 1.7vw;
-  }
-  @media (max-width: 700px){
-    font-size: 8pt;
-  }
+  font-size: 14pt;
+ // @media all{
+ //   font-size: 1.7vw;
+  //}
+//  @media (max-width: 700px){
+  // font-size: 8pt;
+ // }
   font-weight: bold;
   display: inline-block;
   width: fit-content;
@@ -222,18 +230,18 @@ ul#menu {
 
 #buttons{
   position: absolute;
-  height: 24%;
+  //height: 24%;
   display: inline-block;
   top: 2%;
-  right: 1%;
-  width: 17%;
+  right: 2%;
+  //width: 17%;
   z-index: 10;
   float: right;
 }
 
 #button_type1 {
-  margin-right: 3%;
-  padding: 5%;
+  margin-right: 5px;
+  padding: 10px;
   line-height: 2.8em;
   color: black;
   text-decoration: none;
@@ -579,3 +587,53 @@ input[type=checkbox]{
   z-index: 5;
 }
 
+/* price table */
+
+.price_table{
+  position: absolute;
+  top:18%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80%;
+  z-index: 2;
+  table{
+    border-collapse: separate;
+    border-spacing: 5px;
+
+  }
+
+  th{
+    background-color: #c0986c;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 14pt;
+    font-family: 'droid_sansbold';
+  }
+  td{
+    text-align: center;
+    background-color: #f2e9e0;
+    padding: 28px;
+    font-size: 12pt;
+    font-family: 'droid_sansregular';
+  }
+  .left_align{
+    text-align: left;
+  }
+}
+
+.price_content{
+  height: 800px;
+  overflow: hidden;
+  .left_img{
+    position: absolute;
+    top: 300px;
+    left:0;
+  }
+  .right_img{
+    position: absolute;
+    top: 400px;
+    right:0;
+  }
+}
