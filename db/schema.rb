@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119132418) do
+ActiveRecord::Schema.define(version: 20181120133734) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(version: 20181119132418) do
     t.boolean "admin", default: false
     t.string "phone_num"
     t.string "company_name"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

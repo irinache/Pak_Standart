@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :articles
   resources :users
   resources :prices
+  resources :account_activations, only: [:edit]
 end

@@ -1,0 +1,11 @@
+<%# encoding: utf-8 -%>
+<h1>ПакСтандарт</h1>
+
+<p>Здравствуйте <%= @user.name %>!</p>
+
+<p>
+  Добро пожаловать на сайт ПакСтандарт! Нажмите на ссылку внизу чтобы активировать Ваш аккаунт:
+</p>
+
+<%= link_to "Активировать", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
