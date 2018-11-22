@@ -17,3 +17,9 @@ User.create!(name:  "Irina",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+  address = Faker::Address.street_address
+  users.each { |user| user.orders.create!(address: address) }
+end

@@ -1,0 +1,2 @@
+class GoodsInOrder < ApplicationRecord
+end

@@ -1,0 +1,12 @@
+<li id="order-<%= order.id %>">
+  <%= link_to gravatar_for(order.user, size: 50), order.user %>
+  <span class="user"><%= link_to order.user.name, order.user %></span>
+  <span class="address"><%= order.address %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(order.created_at) %> ago.
+    <% if current_user?(order.user) %>
+      <%= link_to "delete", order, method: :delete,
+                  data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

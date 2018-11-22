@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   resources :prices
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :orders,          only: [:new, :create, :destroy]
 end

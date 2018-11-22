@@ -5,14 +5,24 @@
     <div class="order_window">
       Для того, чтобы сделать<br>
       заказ нажмите на кнопку
-      <a href="#" class="button_center" id="button_type2">ЗАКАЗАТЬ</a>
+      <%= link_to "ЗАКАЗАТЬ",  new_order_path, class: "button_center", id:"button_type2"%>
     </div>
   </div>
   <div class="order_list">
     <p class="heading heading-center">
       Мои заказы
     </p>
+    <div class="col-md-8">
+      <% if @user.orders.any? %>
+        <h3>Orders (<%= @user.orders.count %>)</h3>
+        <ol class="orders">
+          <%= render @orders %>
+        </ol>
+        <%= will_paginate @orders %>
+      <% end %>
+    </div>
   </div>
+
   <div class="edit_profile_block">
     <div class="position_center">
       <%= link_to "Редактировать профиль",  edit_user_path, class: "white_button"%>
