@@ -15,13 +15,10 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_redirected_to @user
     follow_redirect!
     assert_template 'users/show'
-    #assert_select 'title', full_title(@user.name)
-    #assert_select 'h1', text: @user.name
-    #assert_select 'h1>img.gravatar'
     assert_match @user.orders.count.to_s, response.body
     assert_select 'div.pagination'
     @user.orders.paginate(page: 1).each do |order|
-      assert_match order.address, response.body
+      assert_match order.id.to_s, response.body
     end
   end
 end

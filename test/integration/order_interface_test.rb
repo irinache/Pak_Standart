@@ -22,7 +22,7 @@ class OrderInterfaceTest < ActionDispatch::IntegrationTest
 
     # Delete
     get user_path(users(:michael))
-    assert_select 'a', text: 'delete'
+    assert_select 'a', text: 'Удалить'
     first_order = @user.orders.paginate(page: 1).first
     assert_difference 'Order.count', -1 do
       delete order_path(first_order)
