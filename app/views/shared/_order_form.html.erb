@@ -1,7 +1,10 @@
 <%= form_for(@order) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :address, placeholder: "Address..." %>
+    <%= f.text_field :address, placeholder: "address..." %>
+    <%= f.text_field :payment_method, placeholder: "payment_method..." %>
+    <%= f.text_field :delivery_method, placeholder: "delivery_method..." %>
+    <%= f.text_area :comment, placeholder: "comment..." %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit "Далее", class: "btn btn-primary" %>
 <% end %>

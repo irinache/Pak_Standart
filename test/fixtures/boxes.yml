@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  width: 
+  length: 
+  height: 
+  density: 
+  color: MyString
+  special_holes: MyString
+
+two:
+  width: 
+  length: 
+  height: 
+  density: 
+  color: MyString
+  special_holes: MyString

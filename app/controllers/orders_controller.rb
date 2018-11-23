@@ -10,11 +10,15 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build(order_params)
     if @order.save
-      flash[:success] = "Order created!"
-      redirect_to current_user
+      #flash[:success] = "Order created!"
+      redirect_to new_boxes_path
     else
       render 'static_pages/home'
     end
+  end
+
+  def show
+    @order = current_user.orders.find(params[:id])
   end
 
   def destroy
@@ -26,7 +30,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:address)
+    params.require(:order).permit(:address, :payment_method, :delivery_method, :comment)
   end
 
   def correct_user

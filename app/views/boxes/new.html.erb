@@ -1,0 +1,15 @@
+<div class="content" style="padding-top: 200px">
+  <%= form_for(@box) do |f| %>
+    <%#= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_field :length, placeholder: "length..." %>
+      <%= f.text_field :width, placeholder: "width..." %>
+      <%= f.text_field :height, placeholder: "height..." %>
+      <%= f.text_field :density, placeholder: "density..." %>
+      <%= f.text_field :color, placeholder: "color..." %>
+      <%= f.text_field :special_holes, placeholder: "special_holes..." %>
+    </div>
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  <% end %>
+
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181122181034) do
+ActiveRecord::Schema.define(version: 20181123164308) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -20,10 +20,25 @@ ActiveRecord::Schema.define(version: 20181122181034) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "goods_in_orders", force: :cascade do |t|
-    t.integer "count"
+  create_table "boxes", force: :cascade do |t|
+    t.float "width"
+    t.float "length"
+    t.float "height"
+    t.float "density"
+    t.string "color"
+    t.string "special_holes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "goods_in_orders", force: :cascade do |t|
+    t.integer "box_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "order_id"
+    t.integer "box_id"
+    t.index ["box_id"], name: "index_goods_in_orders_on_box_id"
+    t.index ["order_id"], name: "index_goods_in_orders_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -36,6 +51,7 @@ ActiveRecord::Schema.define(version: 20181122181034) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.text "comment"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
