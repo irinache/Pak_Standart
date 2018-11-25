@@ -1,13 +1,26 @@
-<li id="order-<%= order.id %>">
-  <%= link_to gravatar_for(order.user, size: 50), order.user %>
-  <span class="user"><%= link_to order.user.name, order.user %></span>
-  <span class="address"> №<%= order.id %></span>
-  <span class="timestamp">
-    Added <%= time_ago_in_words(order.created_at) %> ago.
-    <% if current_user?(order.user) %>
-      <%= link_to "Удалить", order, method: :delete,
-                  data: { confirm: "Вы уверены?" } %>
+<div class="order">
+  <li>
+    <div class="avatar">
+      <%= image_tag image_path("box.png") %>
+    </div>
+    <div class="col">
+      <span class="user_name"><%= link_to order.user.name, order.user %></span>
+    </div>
+    <div class="col">
+    <span class="order_heading">Заказ №<%= order.id %></span>
+    </div>
+    <div class="col">
+      <%= order.created_at.strftime("%d.%m.%Y") %>
+    </div>
+    <div class="col">
       <%= link_to "Показать", order_path%>
-    <% end %>
-  </span>
-</li>
+    </div>
+    <div class="col">
+        <%= link_to "Удалить", order, method: :delete, data: { confirm: "Вы уверены?" } %>
+    </div>
+
+    <div class="col">
+      <span id="button_type1">В обработке</span>
+    </div>
+  </li>
+</div>

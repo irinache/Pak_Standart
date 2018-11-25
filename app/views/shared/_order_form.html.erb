@@ -1,10 +1,13 @@
 <%= form_for(@order) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+  <%#= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_field :address, placeholder: "address..." %>
     <%= f.text_field :payment_method, placeholder: "payment_method..." %>
     <%= f.text_field :delivery_method, placeholder: "delivery_method..." %>
     <%= f.text_area :comment, placeholder: "comment..." %>
+    <%#= f.fields_for :goods_in_orders do |g| %>
+      <%#= render "shared/goods_in_orders_fields", :f => g %>
+    <%# end %>
   </div>
   <%= f.submit "Далее", class: "btn btn-primary" %>
 <% end %>
